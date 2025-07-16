@@ -1,0 +1,16 @@
+langkah setup awal di skip
+
+1. pastikan api bekerja, test di postman
+2. objek file dikirim ke AWS S3 - bucket -- setting lebih dulu
+3. simpan di git, gitignore file .env dan node_modules
+4. masuk terminal EC2 lewat powershell
+ssh -i "my-second-key-pair.pem" ec2-54-251-166-174.ap-southeast-1.compute.amazonaws.com -- error
+
+penanganan di powershell
+1. icacls "C:\Users\USER\MyData\Programming\Dicoding\belajarAPI\API_CHAT_v3\deployments_v2\my-second-key-pair.pem" /inheritance:r
+2. whoami -- dapat username --> desktop-f7tlbci\user
+3. icacls "C:\Users\USER\MyData\Programming\Dicoding\belajarAPI\API_CHAT_v3\deployments_v2\my-second-key-pair.pem" /grant:r "desktop-f7tlbci\user:R" -- SUCCESS
+
+
+panggil ini --> pembuatan instance pake ubuntu
+1. ssh -i "my-second-key-pair.pem" ubuntu@ec2-54-251-166-174.ap-southeast-1.compute.amazonaws.com -- SUCCESS
